@@ -104,6 +104,8 @@ img {
   padding-bottom: 10px;
 
   color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -150,6 +152,7 @@ img {
   padding-bottom: 10px;
 
   color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts .link:hover,
@@ -218,6 +221,7 @@ img {
   padding: 10px 32px;
   border: 1px solid transparent;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -309,16 +313,26 @@ img {
   margin-top: var(--gap);
 }
 
-
 .image {
   position: relative;
-  justify-content: center;
 }
 
 .image-description {
   position: absolute;
-  top: 10px;
-  jus
+  top: 224px;
+  min-width: 370px;
+  min-height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  padding-top: 27px;
 }
 
 /* Our team */
@@ -379,6 +393,8 @@ section-title {
   justify-content: center;
   align-items: center;
   color: var(--social-links-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -414,6 +430,8 @@ section-title {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
   fill: var(--social-links-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-link:hover,
@@ -433,6 +451,10 @@ section-title {
   color: var(--title-text-color);
   background-color: #f5f4fa;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button .list-button:focus,
@@ -472,6 +494,8 @@ section-title {
   flex-basis: calc(100% / 3 - var(--gap));
   margin-left: var(--gap);
   margin-top: var(--gap);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-products:hover {
@@ -527,6 +551,8 @@ section-title {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .link:hover,
@@ -572,6 +598,9 @@ section-title {
   align-items: center;
   color: var(--accent-color);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
