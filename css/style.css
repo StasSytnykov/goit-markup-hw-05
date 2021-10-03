@@ -243,7 +243,10 @@ img {
   height: 100%;
   z-index: 10;
 
+  opacity: 1;
   background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -252,11 +255,15 @@ img {
   visibility: hidden;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   display: flex;
   justify-content: end;
 
@@ -267,6 +274,8 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn {
@@ -554,7 +563,6 @@ section-title {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .our-products:hover,
 .our-products:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -571,7 +579,6 @@ section-title {
 }
 
 .product-overlay {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   transform: translateY(100%);
 
@@ -581,8 +588,7 @@ section-title {
   height: 100%;
 
   background: rgba(33, 150, 243, 0.9);
-
-  opacity: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-products:hover .product-overlay,
