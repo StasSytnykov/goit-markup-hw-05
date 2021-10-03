@@ -66,13 +66,17 @@
         </div>
       </div>
     </header>
-
     <!-- Герой -->
     <main>
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-btn" type="button">Заказать услугу</button>
+          <button data-modal-open class="hero-btn" type="button">Заказать услугу</button>
+          <div data-modal class="backdrop is-hidden">
+            <div class="modal">
+              <button class="modal-btn" type="button" data-modal-close>&#10006;</button>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Особенности -->
@@ -152,7 +156,6 @@
             </li>
 
             <li class="image">
-              
               <img
                 src="./images/img-two.jpg"
                 alt="Человек выбирает интерефейс на телефоне"
@@ -333,7 +336,7 @@
             </li>
 
             <li class="company-item">
-              <a class="company-link" class="test" href="">
+              <a class="company-link" href="">
                 <svg width="106px" height="60px">
                   <use href="./images/sprite.svg#icon-logo-3"></use>
                 </svg>
@@ -415,5 +418,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
